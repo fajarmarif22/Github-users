@@ -26,7 +26,7 @@ export default {
   location: 'Bandung',
   email: null,
   hireable: null,
-  bio: null,
+  bio: 'Front-end Dev.',
   twitter_username: null,
   public_repos: 26,
   public_gists: 0,

@@ -12,28 +12,28 @@ const UserInfo = () => {
     {
       id: 1,
       icon: <GoRepo className='icon' />,
-      label: 'repos',
+      label: 'Repository',
       value: public_repos,
       color: 'pink',
     },
     {
       id: 2,
       icon: <FiUsers className='icon' />,
-      label: 'followers',
+      label: 'Followers',
       value: followers,
       color: 'green',
     },
     {
       id: 3,
       icon: <FiUserPlus className='icon' />,
-      label: 'following',
+      label: 'Following',
       value: following,
       color: 'purple',
     },
     {
       id: 14,
       icon: <GoGist className='icon' />,
-      label: 'gists',
+      label: 'Gists',
       value: public_gists,
       color: 'yellow',
     },
@@ -70,13 +70,21 @@ const Wrapper = styled.section`
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   }
   .item {
-    border-radius: var(--radius);
+    border-radius: 3px 20px 3px 20px;
     padding: 1rem 2rem;
-    background: var(--clr-white);
+    background: #eff5f5;
+    transition: filter 0.1s ease-out;
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 3rem;
     align-items: center;
+    box-shadow: 1px 3px 0px 0px #497174;
+    /* filter: drop-shadow(0px 2px 1px 0px #497174); */
+    transition: filter 0.4s ease-in-out;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+    line-height: 24px;
     span {
       width: 3rem;
       height: 3rem;
@@ -96,21 +104,32 @@ const Wrapper = styled.section`
       text-transform: capitalize;
     }
     .pink {
-      background: #ffe0f0;
+      background: #eff5f5;
       color: #da4a91;
+      box-shadow: 1px 0px 1px 0px #888888;
     }
     .green {
-      background: var(--clr-primary-10);
+      background: #eff5f5;
       color: var(--clr-primary-5);
+      box-shadow: 1px 0px 1px 0px #888888;
     }
     .purple {
-      background: #e6e6ff;
+      background: #eff5f5;
       color: #5d55fa;
+      box-shadow: 1px 0px 1px 0px #888888;
     }
     .yellow {
-      background: #fffbea;
+      background: #eff5f5;
       color: #f0b429;
+      box-shadow: 1px 0px 1px 0px #888888;
     }
+  }
+
+  .item:hover {
+    background: #eff5f5;
+    color: #472d2d;
+    /* box-shadow: 2px 1px 3px 0px #497174 inset; */
+    filter: drop-shadow(2px 10px 2px #497174);
   }
 `
 
